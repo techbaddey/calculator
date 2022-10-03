@@ -21,6 +21,12 @@ body{
     display: flex;
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    .my-logo {
+      animation: Logo-spin infinite 20s linear;
+    }
+  }
+
   .container p {
     text-align: center;
     font-size: 18px;
@@ -99,4 +105,13 @@ body{
     text-align: center;
     flex-direction: column;
     margin: 7px auto 0px auto;
+  }
+
+  @keyframes Logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
